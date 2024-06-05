@@ -1,70 +1,68 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-header {
-    background-color: #20ce23;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-main {
-    padding: 20px;
+.container {
     max-width: 600px;
-    margin: 0 auto;
-}
-
-form {
-    background: white;
+    margin: 50px auto;
+    background: #fff;
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-    margin-bottom: 15px;
+h1, h2 {
+    text-align: center;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.form-group input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="month"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 button {
-    background-color: #20ce23;
-    color: white;
+    padding: 10px;
     border: none;
-    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #4cae4c;
 }
 
-#result {
+.summary {
     margin-top: 20px;
-    text-align: center;
 }
 
-footer {
-    background-color: #20ce23;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+#expense-list, #monthly-expense-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#expense-list li, #monthly-expense-list li {
+    background: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
 }
