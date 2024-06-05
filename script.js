@@ -56,6 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const clearExpensesBtn = document.getElementById('clear-expenses-btn');
     clearExpensesBtn.addEventListener('click', () => {
+        const currentDate = new Date();
+        const currentMonth = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+        monthSelectInput.value = `${currentDate.getFullYear()}-${currentMonth}`;
         clearExpenses();
         updateExpenseList();
         updateTotalAmount();
